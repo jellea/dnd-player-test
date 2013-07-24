@@ -78,7 +78,6 @@ angular.module('playerApp')
       }
       else if (fileObject.type.split('/')[0] == 'image')
       {
-        console.log(fileObject);
         var dataUrl = new FileReader();
         dataUrl.onload = (function (e) {
           var exist = disco.theka.filter(function (i) {if(i.path==path)return i});

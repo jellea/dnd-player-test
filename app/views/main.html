@@ -1,5 +1,4 @@
-<div ng-controller="PlaylistCtrl">
-  <div id="container">
+<div id="container" ng-controller="PlaylistCtrl">
       <div class="playlist">
         <h1>Playlist</h1>
         <nav>
@@ -25,11 +24,12 @@
       <section class="library">
         <h1>Music Library</h1>
         <ul class="albums thumbnails">
-          <li class="album current span4" ng-repeat="album in albums">
-            <button class="queue add" ng-click="player.playlist.add(album)"></button>
-            <span class="album-title">{{album.title}}</span>
-            <span class="artist-name">{{album.artist}}</span>
-            <img src="{{album.albumart}}">
+          <li class="album current span3" ng-repeat="album in albums">
+            <a href="#" class="thumbnail" ng-click="player.playlist.add(album)">
+            <!--<span class="album-title">{{album.title}}</span>-->
+            <!--<span class="artist-name">{{album.artist}}</span>-->
+              <img src="{{album.albumart}}" alt="{{album.artist}} - {{album.title}}">
+            </a>
           </li>
         </ul>
       </section>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/fancypants.css" media="screen, projection">
     <!-- endbuild -->
   </head>
-  <body ng-app="playerApp">
+  <body ng-app="playerApp" ng-view>
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
@@ -27,7 +27,6 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view></div>
 
     <script src="components/angular/angular.js"></script>
     <script src="components/jDataView/src/jDataView.js"></script>
