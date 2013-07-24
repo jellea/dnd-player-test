@@ -53,7 +53,7 @@ angular.module('playerApp')
   var getTags = function (file) {
     file.file(function (fileObject) {
 
-      var path = file.fullPath.split('/')[file.fullPath.split('/').length-2];
+      var parentFolder = file.fullPath.split('/')[file.fullPath.split('/').length-2];
 
       if(fileObject.type == 'audio/mp3'){
         var arrayBufferReader = new FileReader();
@@ -68,7 +68,7 @@ angular.module('playerApp')
               album: dv.getString(30, dv.tell()),
               year: dv.getString(4, dv.tell())
             }
-            disco.add(tags, path, fileObject);
+            disco.add(tags, parentFolder, fileObject);
           } else{
             // no ID3v1 data found.
           }
@@ -80,9 +80,9 @@ angular.module('playerApp')
       {
         var dataUrl = new FileReader();
         dataUrl.onload = (function (e) {
-          var exist = disco.theka.filter(function (i) {if(i.path==path)return i});
+          var exist = disco.theka.filter(function (i) {if(i.path==parentFolder)return i});
           if (exist.length==0){
-            disco.theka.push({albumart:e.target.result, path: path, tracks: []});
+            disco.theka.push({albumart:e.target.result, path: parentFolder, tracks: []});
           }else{}
         });
         dataUrl.readAsDataURL(fileObject);
