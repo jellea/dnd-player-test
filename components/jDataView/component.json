@@ -1,0 +1,9 @@
+{
+  "name": "jDataView",
+  "version": "0.0.0",
+  "commit": "233a5f5ba3d6a3833fcf64490d11785171851388",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jDataView/jDataView.git"
+  }
+}

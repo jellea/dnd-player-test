@@ -1,0 +1,9 @@
+{
+  "name": "JavaScript-ID3-Reader",
+  "version": "0.0.0",
+  "commit": "142ed50de7f9c813cbd345203415d52ed726ef35",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aadsm/JavaScript-ID3-Reader.git"
+  }
+}
